@@ -8,3 +8,5 @@ Project work done in the following languages:
 - CSS
 - Javascript
 - XML
+- SQL
+- RDBMS
