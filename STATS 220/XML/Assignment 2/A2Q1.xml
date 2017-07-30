@@ -1,0 +1,48 @@
+<?xml version="1.0"?>
+<!DOCTYPE ParrotSpecies [
+	<!ELEMENT ParrotSpecies (species+, genus+, conservationStatus+)>
+	
+	<!ELEMENT species EMPTY>
+	<!ELEMENT genus EMPTY>
+	<!ELEMENT conservationStatus EMPTY>
+
+	<!ATTLIST species
+	  id         ID    #REQUIRED
+	  genus      IDREF #IMPLIED
+	  conservationStatus  IDREF #IMPLIED
+	  name     CDATA #IMPLIED
+	  code     CDATA #IMPLIED
+	  length   CDATA #IMPLIED>
+	<!ATTLIST genus
+	  id         ID    #REQUIRED
+	  name       CDATA #IMPLIED>
+	<!ATTLIST conservationStatus
+	  id         ID    #REQUIRED
+	  code       CDATA #IMPLIED>
+]>
+
+<!-- Root element -->
+<ParrotSpecies>
+	
+	<!--Species Section-->
+	<species id="S1" name="Alexandrine parakeet" code="Eupatria" length="58" genus="G1" conservationStatus="C2"/>
+	<species id="S2" name="Rose-ringed parakeet" code="Krameri" length="40" genus="G1" conservationStatus="C1"/>
+	<species id="S3" name="African grey parrot" code="Erithacus" length="33" genus="G2" conservationStatus="C3"/>
+	<species id="S4" name="Budgerigar" code="Undulatus" length="18" genus="G3" conservationStatus="C1"/>
+	<species id="S5" name="Cockatiel" code="Hollandicus" length="32" genus="G4" conservationStatus="C1"/>
+	<species id="S6" name="Sulphur-crested cockatoo" code="Galerita" length="50" genus="G5" conservationStatus="C1"/>
+	<species id="S7" name="Plum-headed parakeet" code="Cyanocephala" length="33" genus="G1" conservationStatus="C1"/>
+	
+	<!--Genus Section-->
+	<genus id="G1" name="Psittacula"/>
+	<genus id="G2" name="Psittacus"/>
+	<genus id="G3" name="Melopsittacus"/>
+	<genus id="G4" name="Nymphicus"/>
+	<genus id="G5" name="Cacatua"/>
+	
+	<!--Conservation Status Section-->
+	<conservationStatus id="C1" code="Least concern"/>
+	<conservationStatus id="C2" code="Near threatened"/>
+	<conservationStatus id="C3" code="Vulnerable"/>
+
+</ParrotSpecies>

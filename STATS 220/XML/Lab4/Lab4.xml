@@ -1,0 +1,42 @@
+<?xml version="1.0"?>
+
+<!DOCTYPE extrasolarPlanets [
+<!ELEMENT extrasolarPlanets (star+)>
+<!ELEMENT star (distance)>
+<!ELEMENT distance (planet+)>
+<!ELEMENT planet EMPTY>
+<!ATTLIST star 
+    name	CDATA 		#REQUIRED>
+<!ATTLIST distance
+    length  CDATA 		#REQUIRED>
+<!ATTLIST planet
+    name  	CDATA 		#REQUIRED
+    orbitalPeriod CDATA #IMPLIED>
+]>
+
+<!-- NOTE that we cannot make 'name' an ID attribute for <star> because
+     the value can have spaces -->
+
+<extrasolarPlanets>
+  <star name="Kepler 186">
+    <distance length="492">
+      <planet name="Kepler 186b " orbitalPeriod="3.8868"/>
+      <planet name="Kepler 186c" orbitalPeriod="7.2673"/>
+      <planet name="Kepler 186d" orbitalPeriod="13.343"/>
+      <planet name="Kepler 186e" orbitalPeriod="22.408"/>
+	  <planet name="Kepler 186f" orbitalPeriod="129.95"/>
+    </distance>
+  </star>
+  
+  <star name="Kepler 22 ">
+    <distance length="620">
+      <planet name="Kepler 22b" orbitalPeriod="289.86"/>
+    </distance>
+  </star>
+  
+  <star name="HD 85512">
+    <distance length="36.4">
+      <planet name="HD 85512b" orbitalPeriod="58.43"/>
+    </distance>
+  </star>
+</extrasolarPlanets>

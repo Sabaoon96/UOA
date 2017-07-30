@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<title> STATS 220: Assignment 01 </title>
+		
+		<!-- CSS styling starts here -->
+		<style type="text/css">
+			span { 
+				font-weight: bold;
+				font-style: italic }
+				
+			p.footer { 
+				font-size: small;
+				color: red; }	
+				
+			img.displayed {
+				display: block;
+				margin-left: auto;
+				margin-right: auto }
+				
+			tr.bold {
+				font-weight: bold }
+				
+			td.column_2 {
+				text-align: right }
+				
+			table {
+				margin: auto;
+				width: 5% }
+		</style>
+		<!-- CSS styling ends here -->
+	</head>
+
+	<body>
+
+		<h1>Inflation in New Zealand</h1>
+		<hr>
+
+		<p>
+			Everyone cares about how much things cost, and how the prices of goods and services change over
+			time. Usually they increase, and this is called <span>inflation</span>. Recently, inflation has been low in many
+			countries around the world, including New Zealand. Economists measure inflation using the
+			<span>consumer price index</span> (CPI). Here is a graph and a table showing the percentage change in the CPI in
+			recent quarters. Note: The graph goes further back in time than the table does.
+		</p>
+
+		<!-- Image plot placed here -->
+		<img class="displayed" src="http://stat220.stat.auckland.ac.nz/stats220/2016/notes/inflation.png" alt="plot.png">
+		
+		<p>Two of the last four quarters had negative inflation. Clearly houses aren't included in the CPI!</p>
+
+		<table summary="Inflation">
+			<tr class="bold">
+				<td>Quarter</td>
+				<td class="column_2">Percentage Change</td>		
+			</tr>
+			<tr>
+				<td>Mar '15</td>
+				<td class="column_2">-0.2</td>		
+			</tr>
+			<tr>
+				<td>Jun '15</td>
+				<td class="column_2">0.4</td>		
+			</tr>
+			<tr>
+				<td>Sep '15</td>
+				<td class="column_2">0.3</td>		
+			</tr>
+			<tr>
+				<td>Dec '15</td>
+				<td class="column_2">-0.5</td>		
+			</tr>
+		</table>
+		
+		<hr>
+		<p class="footer"> 
+			Data obtained from  
+			<a href="http://www.stats.govt.nz/">Statistics New Zealand</a>.
+		</p>
+
+	</body>
+
+</html>
