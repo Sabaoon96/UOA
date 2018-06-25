@@ -1,0 +1,424 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="COMPSCI 345 - Assignment 3">
+    <meta name="author" content="Sabaoon Raza Khan">
+
+    <!-- Favicon Image -->
+    <link rel="icon" href="vendor/images/logo.png">
+    <title>PeerStudy | Solutions</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Custom CSS file -->
+    <link rel="stylesheet" type="text/css" href="vendor/bootstrap/css/main.css">
+  </head>
+
+  <body>
+    <!-- Edited SOURCE: https://getbootstrap.com/docs/4.1/examples/dashboard/ -->
+    <nav class="navbar navbar-dark fixed-top bg-dark flex-md-nowrap p-0 shadow">
+      <a class="navbar-brand col-sm-3 col-md-2 mr-0" href="#">
+        <img src="vendor/images/logo.png" width="20px" alt="PeerStudy Logo">&nbsp; PeerStudy
+      </a>
+      <input class="form-control form-control-dark w-100" type="text" placeholder="Search" aria-label="Search">
+      <ul class="navbar-nav px-3 notifications">
+        <li class="nav-item text-nowrap">
+          <a class="nav-link" href="#"><span data-feather="bell"></span> Notifications
+            <span class="badge badge-pill" id="notifyNew" style="background-color:red; color:white"> 5</span>
+          </a>
+        </li>
+      </ul>
+      <ul class="navbar-nav px-3 user">
+        <li class="nav-item text-nowrap">
+          <a class="nav-link" href="#"><span data-feather="user"></span> Hi Sabaoon!</a>
+        </li>
+      </ul>
+    </nav>
+
+    <div class="container-fluid">
+      <div class="row">
+        <nav class="col-md-2 d-none d-md-block bg-light sidebar">
+          <div class="sidebar-sticky">
+            <ul class="nav flex-column">
+              <li class="nav-item">
+                <a class="nav-link" href="#">
+                  <span data-feather="home"></span>
+                  Dashboard 
+                </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link active" href="#">
+                  <span data-feather="file-text"></span>
+                  Solutions <span class="sr-only">(current)</span>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">
+                  <span data-feather="book-open"></span>
+                  Resources
+                </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">
+                  <span data-feather="calendar"></span>
+                  Calendar
+                </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">
+                  <span data-feather="help-circle"></span>
+                  Help
+                </a>
+              </li>
+            </ul>
+
+            <h6 class="sidebar-heading d-flex justify-content-between align-items-center px-3 mt-4 mb-1 text-muted">
+              <span>Chats</span>
+              <a class="d-flex align-items-center text-muted" href="#">
+                <span data-feather="search"></span>
+              </a>
+            </h6>
+            <ul class="nav flex-column mb-2">
+              <li class="nav-item">
+                <a class="nav-link" href="#">
+                  <span data-feather="users" class="text-success"></span>
+                  Group Chat
+                  <span class="badge badge-pill float-right mt-1" style="background-color:red; color:white"> 10</span>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">
+                  <span data-feather="user-check" class="text-success"></span>
+                  Anin Kaur
+                </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">
+                  <span data-feather="user-check" class="text-success"></span>
+                  Daniel Baard
+                </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">
+                  <span data-feather="user-check" class="text-success"></span>
+                  Tika Yuwana
+                  <span class="badge badge-pill float-right mt-1" style="background-color:red; color:white"> 2</span>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">
+                  <span data-feather="user-x"></span>
+                  Dave Smith
+                </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">
+                  <span data-feather="user-x"></span>
+                  Lulu Tamati
+                </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#" data-toggle="modal" data-target="#chatModal" onclick="markRead()">
+                  <span data-feather="user-x"></span>
+                  Soju Lee
+                  <span class="badge badge-pill float-right mt-1" style="background-color:red; color:white" id="sojuChat"> 1</span>
+                </a>
+              </li>
+            </ul>
+          </div>
+        </nav>
+        <!-- END SOURCE: https://getbootstrap.com/docs/4.1/examples/dashboard/ -->
+
+        <main role="main" class="col-md-9 ml-sm-auto col-lg-10 px-4">
+          <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
+            <h6>
+              <nav aria-label="breadcrumb">
+                <ol class="breadcrumb breadcrumb-custom mb-0">
+                  <li class="breadcrumb-item"><a href="#">Solutions</a></li>
+                  <li class="breadcrumb-item"><a href="#">Physical Education</a></li>
+                  <li class="breadcrumb-item active" aria-current="page">Assignment 1</li>
+                </ol>
+              </nav>
+            </h6>
+            <div class="btn-toolbar mb-2 mb-md-0">
+              <div class="btn-group mr-2">
+                <button class="btn btn-sm btn-outline-secondary"><span data-feather="save"></span> Save</button>
+                <button class="btn btn-sm btn-outline-secondary"><span data-feather="navigation"></span> Share</button>
+              </div>
+              <button class="btn btn-sm btn-outline-secondary dropdown-toggle">
+                <span data-feather="activity"></span>
+                Submission History
+              </button>
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="col-lg-12">
+
+              <div class="accordion" id="accordion">
+                <div class="card">
+                  <div class="card-header" id="headingOne">
+                    <h6 class="mb-0">
+                      <button class="btn btn-link text-dark" type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                        Assignment 1: Problem Statement &nbsp;
+                        <span id="arrow-dropdown" data-feather="chevron-down"></span>
+                      </button>
+                      <span class="float-right mt-2">Due Date: 21st May, 2018</span>
+                    </h6>
+                  </div>
+              
+                  <div id="collapseOne" class="collapse" aria-labelledby="headingOne" data-parent="#accordion">
+
+                    <div class="card-body">
+                      <p class="card-text">
+                        <ul class="list-unstyled ml-3">
+                          <li>Design &amp; justify a weekly training schedule for the school soccer team with the following requirements:
+                          <br><br>
+                          <ul>
+                            <li>Two training sessions per week, keeping in mind official matches are scheduled for the end of the week.</li>
+                            <li>Each training session runs for 2 hours.</li>
+                            <li>Includes warm-up, strength training, skills training, team coordination and practice.</li>
+                          </ul>
+                          </li>
+                        </ul>
+                      </p>
+                    </div>
+
+                  </div>
+                </div>
+              </div>
+
+              <br>
+
+              <!-- Post Content -->
+              <div class="card">
+                <div class="card-header">
+                  <ul class="nav nav-pills solutionsTab" id="pills-tab" role="tablist">
+                    <li class="nav-item">
+                      <a class="nav-link active" id="pills-mySolution-tab" data-toggle="pill" href="#pills-mySolution" role="tab" aria-controls="pills-mySolution" aria-selected="true">My Solution</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" id="pills-anin-tab" data-toggle="pill" href="#pills-anin" role="tab" aria-controls="pills-anin" aria-selected="false">Anin Kaur</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" id="pills-daniel-tab" data-toggle="pill" href="#pills-daniel" role="tab" aria-controls="pills-daniel" aria-selected="false">Daniel Baard</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" id="pills-dave-tab" data-toggle="pill" href="#pills-dave" role="tab" aria-controls="pills-dave" aria-selected="false">Dave Smith</a>
+                    </li> 
+                    <li class="nav-item">
+                      <a class="nav-link" id="pills-lulu-tab" data-toggle="pill" href="#pills-lulu" role="tab" aria-controls="pills-lulu" aria-selected="false">Lulu Tamati</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" id="pills-soju-tab" data-toggle="pill" href="#pills-soju" role="tab" aria-controls="pills-soju" aria-selected="false">Soju Lee</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" id="pills-tika-tab" data-toggle="pill" href="#pills-tika" role="tab" aria-controls="pills-tika" aria-selected="false">Tika Yuwana</a>
+                    </li>
+                  </ul>
+                </div>
+
+                <div class="card-body">
+                  <div class="tab-content" id="pills-tabContent">
+
+                  <div class="tab-pane fade show active" id="pills-mySolution" role="tabpanel" aria-labelledby="pills-mySolution-tab">
+                    <div class="row">
+                      <div class="col-md-8">
+                        <h6>Solution: </h6>
+
+                        <!-- Solution Form -->
+                        <div class="card my-4">
+                          <div class="card-body">
+                            <form>
+                              <div class="form-group">
+                                <textarea class="form-control" id="onlyView" rows="7" readonly>School Soccer Weekly Training Schedule:
+
+    - Training Mondays and Wednesdays, with official school matches on Friday. 
+    - Tuesdays and Thursdays would be resting time for players.
+    - Team practices, dribbling, volleying, passing, and corner training.</textarea>
+                              </div>
+                            </form>
+                          </div>
+                          <div class="card-footer submitBar">
+                            <button type="button" class="btn btn-primary" id="editButton" onclick="editOrSubmit()">Edit</button>
+                            <p class="float-right mt-2 mb-0" id="lastEdited"></p>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col-md-4">
+                        <h6>Feedback: </h6>
+
+                        <!-- Comments Form -->
+                        <div class="card my-4">
+                          <div class="card-body">
+                            <form>
+                              <div class="form-group">
+                                <label>Full Name:</label>
+                                <textarea class="form-control" rows="1" id="postName" placeholder="Type your name here"></textarea>
+                                <br>
+                                <label>Comments:</label>
+                                <textarea class="form-control" rows="2" id="postFeedback" placeholder="Type your feedback here"></textarea>
+                              </div>
+                            </form>
+                          </div>
+                          <div class="card-footer">
+                            <button type="submit" class="btn btn-primary" onclick="postConfirm()">Post</button>
+                          </div>
+                        </div>
+
+                        <!-- Comments Thread -->
+                        <div class="media mb-4">
+                          <img class="d-flex mr-3 rounded-circle" src="http://placehold.it/50x50" alt="">
+                          <div class="media-body">
+                            <h6 class="mt-0">Soju Lee</h6>
+                            I think the overall training schedule plan you have seems alright, however remember to justify your choices.
+                          </div>
+                          <a class="reply-button">Reply</a>
+                        </div>
+
+                        <div class="media mb-4">
+                          <img class="d-flex mr-3 rounded-circle" src="http://placehold.it/50x50" alt="">
+                          <div class="media-body">
+                            <h6 class="mt-0">Lulu Tamati</h6>
+                            How detailed does our design justification have to be?
+                          </div>
+                          <a class="reply-button">Reply</a>
+                        </div>
+
+                        <div class="media mb-4">
+                          <span id="personImg"></span>
+                          <div class="media-body">
+                            <h6 class="mt-0" id="threadName"></h6>  
+                            <p id="thread"></p>
+                          </div>
+                          <a class="reply-button" id="newReply"></a>
+                        </div>
+
+                      </div>
+                    </div>
+                  </div>
+                  <div class="tab-pane fade" id="pills-anin" role="tabpanel" aria-labelledby="pills-anin-tab">
+                    <div class="row">
+                        <div class="col-md-8">
+                          <h6>Solution: </h6>
+  
+                          <!-- Solution Form -->
+                          <div class="card my-4">
+                            <div class="card-body">
+                              <form>
+                                <div class="form-group">
+                                  <textarea class="form-control" id="onlyView" rows="12" readonly>Ball UEFA European Championship number 10 halftime goalie hat trick midfielder referee African Cup of Nations pitch defender striker brace center-half. 
+                                    
+Three-five-two yellow card halftime World Cup ball one-two chip hat trick defender striker center-half forward soccer African Cup of Nations. African Cup of Nations number 10 yellow card goal striker chip four-four-two midfielder defender pitch UEFA European Championship referee upper 90 three-five-two. 
+
+Upper 90 forward UEFA European Championship pitch halftime hat trick midfielder three-five-two number 10 soccer red card yellow card African Cup of Nations.</textarea>
+                                </div>
+                              </form>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="col-md-4">
+                          <h6>Feedback: </h6>
+  
+                          <!-- Comments Form -->
+                          <div class="card my-4">
+                            <div class="card-body">
+                              <form>
+                                <div class="form-group">
+                                  <label>Full Name:</label>
+                                  <textarea class="form-control" rows="1" id="anin-postName" placeholder="Type your name here"></textarea>
+                                  <br>
+                                  <label>Comments:</label>
+                                  <textarea class="form-control" rows="2" id="anin-postFeedback" placeholder="Type your feedback here"></textarea>
+                                </div>
+                              </form>
+                            </div>
+                            <div class="card-footer">
+                              <button type="submit" class="btn btn-primary" onclick="aninPostConfirm()">Post</button>
+                            </div>
+                          </div>
+  
+                          <!-- Comments Thread -->
+                          <div class="media mb-4">
+                            <img class="d-flex mr-3 rounded-circle" src="http://placehold.it/50x50" alt="">
+                            <div class="media-body">
+                              <h6 class="mt-0">Tika Yuwana</h6>
+                              Haha, that's some fun soccer lorem ipsum you've used there. I think I might use it for some parts of my solution too :p
+                            </div>
+                            <a class="reply-button">Reply</a>
+                          </div>
+  
+                          <div class="media mb-4">
+                            <span id="anin-personImg"></span>
+                            <div class="media-body">
+                              <h6 class="mt-0" id="anin-threadName"></h6>  
+                              <p id="anin-thread"></p>
+                            </div>
+                            <a class="reply-button" id="anin-newReply"></a>
+                          </div>
+  
+                        </div>
+                      </div>
+                  </div>
+
+                  <!-- Tab Content Ends here-->
+                  </div>
+                </div>
+              </div>
+
+            </div>
+          </div>
+        </main>
+      </div>
+    </div>  
+
+    <!-- Chat Modal -->
+    <div class="modal fade" id="chatModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h6 class="modal-title" id="exampleModalLabel">Soju Lee</h6>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            <form>
+              <div class="form-group">
+                <p id="recipient-name" class="text-primary col-form-label">Soju: Hey Sabaoon! </p> 
+                <p>You: Hey, what's up?</p>
+                <p id="recipient-name" class="text-primary col-form-label">Soju: Would you mind having a look at my work and let me know what you think of it?</p>
+                <p>You: I'll just look into it. Do you wanna start a voice call, so we can discuss?</p>
+                <p id="recipient-name" class="text-primary col-form-label">Soju: Sure, just give me a minute. </p> 
+              </div>
+              <div class="form-group">
+                <label for="message-text" class="col-form-label">Message:</label>
+                <textarea class="form-control" id="message-text"></textarea>
+              </div>
+            </form>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-primary" data-dismiss="modal">Send</button>
+            <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    <!-- Data Feathers Icons -->
+    <script src="https://unpkg.com/feather-icons/dist/feather.min.js"></script>
+    <script>
+      feather.replace()
+    </script>
+
+    <!-- Bootstrap core JavaScript -->
+    <script src="vendor/jquery/jquery.min.js"></script>
+    <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <!-- Custom Javascript -->
+    <script src="vendor/bootstrap/js/custom.js"></script>
+  </body>
+
+</html>
